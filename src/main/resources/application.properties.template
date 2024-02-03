@@ -1,0 +1,29 @@
+# PostgreSQL connection properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres_jira_stream_db
+spring.datasource.username=
+spring.datasource.password=
+
+# Connection pool settings
+spring.datasource.hikari.maximum-pool-size=10
+spring.datasource.hikari.minimum-idle=2
+spring.datasource.hikari.idle-timeout=30000
+spring.datasource.hikari.max-lifetime=1800000
+spring.datasource.hikari.connection-timeout=30000
+
+# Specify the DB driver
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Hibernate properties
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# Specify the dialect for PostgreSQL
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# Validation query used by the connection pool
+spring.datasource.hikari.connection-test-query=SELECT 1
+
+# Logging
+logging.level.org.springframework.jdbc.core=DEBUG
+logging.level.org.hibernate.SQL=DEBUG

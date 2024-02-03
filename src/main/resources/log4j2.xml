@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+  <Appenders>
+    <Console name="LogToConsole" target="SYSTEM_OUT">
+      <PatternLayout disableAnsi="false"
+        pattern="%highlight{%-5level [%c{1}:%L] }{FATAL=red , ERROR=red , WARN=yellow , INFO=green , DEBUG=blue}%d{MMM dd yy HH:mm:ss} => %highlight{%m%n}"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger additivity="false" level="debug" name="com.remy">
+      <AppenderRef ref="LogToConsole"/>
+    </Logger>
+    <Root level="debug">
+      <AppenderRef ref="LogToConsole"/>
+    </Root>
+  </Loggers>
+</Configuration>

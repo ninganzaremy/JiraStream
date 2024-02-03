@@ -1,0 +1,13 @@
+<Context>
+  <Resource auth="Container"
+    driverClassName="org.postgresql.Driver"
+    maxIdle="5"
+    maxTotal="10"
+    minIdle="2"
+    name="jdbc/jiraStream"
+    password=
+    type="javax.sql.DataSource"
+    url="jdbc:postgresql://localhost:5432/postgres_jira_stream_db"
+    username=
+    validationQuery="SELECT 1" />
+</Context>
